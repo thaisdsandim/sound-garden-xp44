@@ -22,9 +22,11 @@
 
 ## 📁 Project access
 
-You can access the page [here](https://thaisdsandim.github.io/dindin-cursos/index.html).
+You can access the page [here](https://thaisdsandim.github.io/sound-garden-xp44/).
 
 You can access the documentation [here](https://drive.google.com/file/d/1h2HfhGwUEN-kYZX-UMwLtw4qeNLrwIkC/view?usp=sharing).
+
+You can access the API documentation [here](https://documenter.getpostman.com/view/3028053/UVsTp2LC).
 
 ## ✔️ Tools used
 
