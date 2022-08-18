@@ -1,39 +1,40 @@
-const SOUND_URL = 'https://xp41-soundgarden-api.herokuapp.com/bookings';
+const findID = () => {
+    const url = new URL(window.location.href);
+    const id = url.searchParams.get('id');
+    return id;
+
+}
+
+const url = 'https://xp41-soundgarden-api.herokuapp.com/bookings/event/'+ findID()
+
+console.log(url);
 
 const listarReservas = async () => {
-
-    const reservas = await fetch(SOUND_URL, {
-        method: "GET",
-        mode: "cors",
+    const reservas= await fetch (url, {
+        method: 'GET',
+        mode: 'cors',
         headers: {
-            "Content-Type": "application/json"
-        }
-    }).then((resposta) => {
-
-        //retorna lista em array de objetos
-        return resposta.json();
-    });
-
-    // console.log(reservas);
-
-    const tbody = document.querySelector('.lista-reservas tbody');
-
-    let htmlReservas = "";
-
-    reservas.forEach(reserva => {
-        htmlReservas += `
+            'Content-Type': 'application/json'
+        },
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        data.map(value => {
+            let tb = '';
+            tb += `
             <tr>
-                <th scope="row">#</th>
-                <td>${reserva._id}</td>
-                <td>${reserva.owner_name}</td>
-                <td>${reserva.owner_email}</td>
-                <td>${reserva.number_tickets}</td>
-              </tr>
-        `;
-    });
-
-    tbody.innerHTML = htmlReservas;
-
+            <th>${value._id}</th>
+            <td>${value.owner_name}</td>
+            <td>${value.owner_email}</td>
+            <td>${value.number_tickets}</td>
+            <td>
+            <a href="=${value._id}" class="btn btn-danger exclui">excluir</a>
+            </td>
+            </tr>`
+            let tbody = document.querySelector('#tb');
+            tbody.innerHTML = tb;
+        });   
+    })
 }
 
 listarReservas();
