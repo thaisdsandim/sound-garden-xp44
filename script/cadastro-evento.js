@@ -42,7 +42,8 @@ formCadastroEvento.addEventListener('submit', async (event) => {
         return response.json();
     }).then((responseOBJ) => {
         console.log(responseOBJ);
-    });
+    })
 
+    alert("O evento foi cadastrado com sucesso!")
 
 });
