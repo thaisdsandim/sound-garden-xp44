@@ -1,7 +1,7 @@
 # <img align="center" src="https://github.com/thaisdsandim/sound-garden-xp44/blob/main/img/Sound-logo%20(1).png" height="100"/>
 
 <p align="left">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=UNDER%20DEVELOPMENT&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=READY&color=GREEN&style=for-the-badge"/>
 <img src="https://img.shields.io/github/languages/count/thaisdsandim/sound-garden-xp44?style=for-the-badge"/>
 <img src="https://img.shields.io/github/repo-size/thaisdsandim/sound-garden-xp44?style=for-the-badge"/>
 </p>
